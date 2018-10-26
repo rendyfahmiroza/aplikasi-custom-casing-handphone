@@ -5,3 +5,4 @@ Library yang digunakan :
 2. Jquery (Javascript) : https://jquery.com/
 3. FabricJs (Interactive Object Model on Canvas) : http://fabricjs.com/
 
+![alt text](https://github.com/rendyfahmiroza/aplikasi-custom-casing-handphone/blob/master/assets/localhost_customs_case_(iPhone%206_7_8).png)
