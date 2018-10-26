@@ -7,6 +7,7 @@ Fitur :
 4. Sisip Gambar (Edit, Update, Delete)
 5. Sisip Clipart (Edit, Update, Delete)
 6. Sisip Tulisan (Edit, Update, Delete)
+7. Beberapa Fitur Pendukung
 
 Library yang digunakan :
 1. Framework 7 (Template) : https://framework7.io/
