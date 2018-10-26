@@ -6,4 +6,5 @@ Library yang digunakan :
 3. FabricJs (Interactive Object Model on Canvas) : http://fabricjs.com/
 
 Preview : 
+
 ![alt text](https://github.com/rendyfahmiroza/aplikasi-custom-casing-handphone/blob/master/localhost_customs_case_(iPhone%206_7_8).png?raw=true)
