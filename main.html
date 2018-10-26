@@ -1,0 +1,786 @@
+<div data-page="my-app" class="page pages--white">
+    <!--Navbar-->
+    <div class="main--navbar navbar theme-green navbar--main">
+      <div class="navbar-inner">
+        <!--Left Navbar-->
+        <div class="left">
+            <a href="#" class="back link cancel-editor"> <i class="f7-icons color-white">arrow_left</i></a>
+            <span class="title--apps">Editor</span>
+        </div>
+        <!--Right Navbar-->
+        <div class="right">
+          <a href="#" class="link icon-only help"> 
+              <i class="f7-icons color-white size-14 fwt">help</i>
+          </a>
+          <a href="#" class="link icon-only save-cart"> 
+              <i class="f7-icons color-white">bag_fill</i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--Page Content-->
+    <div class="main--content page-content page--content-rjc">
+        <div class="right--top-menu">
+            <a href="#" class="floating-button theme-deeporange" id="help">
+                <i class="f7-icons color-white">filter-fill</i>
+            </a>
+            <a href="#" data-popup=".popup-produk" class="open-popup floating-button settings-fill theme-deeporange t-45">
+                <i class="f7-icons">settings_fill</i>
+            </a>
+        </div>
+        <div class="left--bottom-menu">
+            <a href="#" class="floating-button theme-deeporange info-fill">
+                <i class="f7-icons color-white size-14">info</i>
+            </a>
+        </div>
+        <div class="center-menu hide-on-zoom">
+            <div class="info-container">
+                <span class="attr-data"  id="dwn">Material: Hard Case Doff (tidak mengkilat)</span>
+                <span class="price-tag">Harga: Rp. 90.000</span>
+                <span class="stock-info" style="color: red; font-size: 12px; padding-top: 2px; display: none;">Stock kosong</span>
+            </div>
+            <div class="f7-icons show-hide-center-menu color-black" >chevron_down</div>
+        </div>
+        <div class="main--inner col-100 text-center">
+           <div class="content--inner" id="content--inner-canvas">
+<!--                <img src="iphone7.png" alt="iphone">-->
+              <canvas id="canvas-editor"></canvas>
+           </div>
+        </div>
+    </div>
+    <!--General-->
+    <div class="toolbar tabbar tabbar-labels general-toolbar toolbar-bottom theme-green">
+      <div class="toolbar-inner">
+          <a href="#" data-popup=".popup-produk" class="link open-popup toolbar-produk">
+              <i class="f7-icons color-white mt-5 size-18">data_fill</i>
+              <span class="tabbar-label tabbar--main color-white lh-0">PRODUK</span>
+          </a>
+          <a href="#" class="link toolbar-upload">
+              <i class="f7-icons color-white mt-5 size-18">images_fill</i>
+              <span class="tabbar-label tabbar--main color-white lh-0">GAMBAR</span>
+          </a>
+          <a href="#" data-popup=".popup-clipart" class="link open-popup toolbar-clipart">
+              <i class="f7-icons color-white mt-5 size-18">layers_fill</i>
+              <span class="tabbar-label tabbar--main color-white lh-0">CLIPART</span>
+          </a>
+          <a href="#" data-popup=".popup-input-text" class="link open-popup toolbar-teks">
+              <i class="f7-icons color-white mt-5 size-18">at_fill</i>
+              <span class="tabbar-label tabbar--main color-white lh-0">TEKS</span>
+          </a>
+      </div>
+    </div>
+    <!--Main-->
+    <div class="toolbar tabbar tabbar-labels general-toolbar toolbar-bottom theme-white toolbar-event">
+      <div class="toolbar-inner">
+          <a href="#" data-popup=".popup-edit-text" class="link open-popup button button-raised button-fill ripple-green btn--custom toolbar-ubah">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">GANTI</span>
+          </a>
+             <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-color">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">WARNA</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-perbesar">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">PERBESAR</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-perkecil">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">PERKECIL</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-tengah">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">CENTER</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-format">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">FORMAT</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-outline">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">OUTLINE</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-bayangan">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">BAYANGAN</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-bentuk">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">BENTUK</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-overlay">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">OVERLAY</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-spasi">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">SPASI</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-filter">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">FILTER</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-mask">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">MASK</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-susunan">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">SUSUNAN</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-flip">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">FLIP</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-posisi">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">POSISI</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-putar">
+              <i class="f7-icons color-black mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">PUTAR</span>
+          </a>
+          <a href="#" class="link button button-raised button-fill ripple-green btn--custom toolbar-hapus">
+              <i class="f7-icons color-red mt-5 size-18">data</i>
+              <span class="tabbar-label tabbar--secondary color-black lh-0">HAPUS</span>
+          </a>
+      </div>
+    </div>
+    <!--Color-->
+    <div class="toolbar toolbar-bottom theme-white third-toolbar color-font single-color">
+       <div class="toolbar-inner">
+           <div class="view navbar-fixed">
+                <div class="color-page pages">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <a class="link reset reset-color" hidden="">
+                                    <i class="f7-icons color-red">refresh</i>
+                                    <span class="color-black">reset</span>
+                                </a>
+                            </div>
+                            <div class="center sliding color-black object-title object-color-header">Ganti Warna</div>
+                            <div class="right">
+                                <a href="#" class="link close-third-toolbar">
+                                    <i class="f7-icons color-black">close</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                      <span class="color-black">Pilih Warna:</span>
+                      <div class="row">
+                          <div class="col-100 color-list-container">
+                              <div class="color-list"></div>
+                          </div> 
+                      </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    <!--Format-->
+    <div class="toolbar tabbar tabbar-labels toolbar-bottom theme-white third-toolbar format-font">
+       <div class="toolbar-inner toolbar-full-button">
+           <a href="#" class="link button button-raised button-fill ripple-green">
+              <span class="tabbar-label tabbar--secondary color-black lh-0">NORMAL</span>
+          </a>
+       </div>
+    </div>
+    <!--Outline-->
+    <div class="toolbar toolbar-bottom theme-white third-toolbar outline-font">
+       <div class="toolbar-inner">
+           <div class="view navbar-fixed">
+                <div class="color-page pages">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <a class="link reset reset-outline" hidden="">
+                                    <i class="f7-icons color-red">refresh</i>
+                                    <span class="color-black">reset</span>
+                                </a>
+                            </div>
+                            <div class="center sliding color-black object-title object-color-header">Edit garis luar</div>
+                            <div class="right">
+                                <a href="#" class="link close-third-toolbar">
+                                    <i class="f7-icons color-black">close</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                      <span class="color-black">Pilih Warna:</span>
+                      <div class="row">
+                          <div class="col-100 color-list-container">
+                              <div class="color-list"></div>
+                          </div> 
+                      </div>
+                      <span class="color-black">Garis luar:</span>
+                      <div class="row pr-10">
+                          <div class="col-10 value-input value-input-offset text-center">
+                            <span class="color-black value-outline">0</span>
+                          </div>
+                            <div class="range-slider range-slider-custom theme-black">
+                              <input type="range" class="range-outline" min="0" max="100" step="1" value="0">
+                            </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    <!--Bayangan-->
+    <div class="toolbar toolbar-bottom theme-white third-toolbar shadow-font">
+       <div class="toolbar-inner">
+           <div class="view navbar-fixed">
+                <div class="color-page pages">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <a class="link reset reset-shadow" hidden="">
+                                    <i class="f7-icons color-red">refresh</i>
+                                    <span class="color-black">reset</span>
+                                </a>
+                            </div>
+                            <div class="center sliding color-black object-title object-color-header">Edit bayangan</div>
+                            <div class="right">
+                                <a href="#" class="link close-third-toolbar">
+                                    <i class="f7-icons color-black">close</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                      <span class="color-black">Pilih Warna:</span>
+                      <div class="row">
+                          <div class="col-100 color-list-container">
+                              <div class="color-list"></div>
+                          </div> 
+                      </div>
+                      <span class="color-black">Bayangan:</span>
+                      <div class="row">
+                           <a href="#" class="button button-fill color-orange shadow-btn">Pilih</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    <!--Bentuk-->
+    <div class="toolbar toolbar-bottom theme-white third-toolbar bentuk-font">
+       <div class="toolbar-inner">
+           <div class="view navbar-fixed">
+                <div class="color-page pages">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <a class="link reset reset-color" hidden="">
+                                    <i class="f7-icons color-red">refresh</i>
+                                    <span class="color-black">reset</span>
+                                </a>
+                            </div>
+                            <div class="center sliding color-black object-title object-color-header">Edit bentuk</div>
+                            <div class="right">
+                                <a href="#" class="link close-third-toolbar">
+                                    <i class="f7-icons color-black">close</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                      <span class="color-black">Lengkungan:</span>
+                      <div class="row pr-10">
+                          <div class="col-10 value-input value-input-offset text-center">
+                            <span class="color-black">0</span>
+                          </div>
+                            <div class="range-slider range-slider-custom theme-black">
+                              <input type="range" min="0" max="100" step="1" value="0">
+                            </div>
+                      </div>
+                      <span class="color-black">Bentuk:</span>
+                      <div class="row">
+                           <a href="#" class="button button-fill color-orange bentuk-btn">Pilih</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    <!--Overlay-->
+    <div class="toolbar toolbar-bottom theme-white third-toolbar overlay">
+       <div class="toolbar-inner">
+           <div class="view navbar-fixed">
+                <div class="color-page pages">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <a class="link reset reset-overlay" hidden="">
+                                    <i class="f7-icons color-red">refresh</i>
+                                    <span class="color-black">reset</span>
+                                </a>
+                            </div>
+                            <div class="center sliding color-black object-title object-color-header">Edit overlay</div>
+                            <div class="right">
+                                <a href="#" class="link close-third-toolbar">
+                                    <i class="f7-icons color-black">close</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                      <div class="row no-gutter overlay-horizontal">
+                      </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    <!--Spasi-->
+    <div class="toolbar tabbar tabbar-labels toolbar-bottom theme-white third-toolbar spasi-font">
+       <div class="toolbar-inner toolbar-full-button p-10 pr-10">
+           <div class="col-10 value-input value-input-offset text-center">
+            <span class="color-black value-spasi">0</span>
+           </div>
+            <div class="range-slider range-slider-custom theme-black">
+              <input type="range" class="range-spasi" min="0" max="100" step="1" value="0">
+            </div>
+       </div>
+    </div>
+    <!--Filter-->
+    <div class="toolbar toolbar-bottom theme-white third-toolbar filter">
+       <div class="toolbar-inner">
+           <div class="view navbar-fixed">
+                <div class="color-page pages">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <a class="link reset reset-filter" hidden="">
+                                    <i class="f7-icons color-red">refresh</i>
+                                    <span class="color-black">reset</span>
+                                </a>
+                            </div>
+                            <div class="center sliding color-black object-title object-color-header">Edit filter</div>
+                            <div class="right">
+                                <a href="#" class="link close-third-toolbar">
+                                    <i class="f7-icons color-black">close</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                      <div class="row no-gutter filter-horizontal">
+                          <div class="col-20">
+                            <label class="label-radio custom-preview-radio custom-preview-filter">
+                                <input type="radio" name="overlay_id" checked>
+                                <div class="item-inner">
+                                    <img src="img/Filter/original.png" data-original="img/Filter/original.png" data-filter="original" class="lazy-load filter-preview" style="display: inline;">
+                                </div>
+                                original
+                            </label>
+                           </div>
+                           <div class="col-20">
+                            <label class="label-radio custom-preview-radio custom-preview-filter">
+                                <input type="radio" name="overlay_id" checked>
+                                <div class="item-inner">
+                                    <img src="img/Filter/invert.png" data-filter="invert" data-original="img/Filter/invert.png" class="lazy-load filter-preview" style="display: inline;">
+                                </div>
+                                invert
+                            </label>
+                           </div>
+                           <div class="col-20">
+                            <label class="label-radio custom-preview-radio custom-preview-filter">
+                                <input type="radio" name="overlay_id" checked>
+                                <div class="item-inner">
+                                    <img src="img/Filter/grayscale.png" data-filter="grayscale" data-original="img/Filter/grayscale.png" class="lazy-load filter-preview" style="display: inline;">
+                                </div>
+                                grayscale
+                            </label>
+                           </div>
+                           <div class="col-20">
+                            <label class="label-radio custom-preview-radio custom-preview-filter">
+                                <input type="radio" name="overlay_id" checked>
+                                <div class="item-inner">
+                                    <img src="img/Filter/sepia.png" data-filter="sepia" data-original="img/Filter/sepia.png" class="lazy-load filter-preview" style="display: inline;">
+                                </div>
+                                sepia
+                            </label>
+                           </div>
+                           <div class="col-20">
+                            <label class="label-radio custom-preview-radio custom-preview-filter">
+                                <input type="radio" name="overlay_id" checked>
+                                <div class="item-inner">
+                                    <img src="img/Filter/brownie.png" data-filter="brownie" data-original="img/Filter/brownie.png" class="lazy-load filter-preview" style="display: inline;">
+                                </div>
+                                brownie
+                            </label>
+                           </div>
+                           <div class="col-20">
+                            <label class="label-radio custom-preview-radio custom-preview-filter">
+                                <input type="radio" name="overlay_id" checked>
+                                <div class="item-inner">
+                                    <img src="img/Filter/vintage.png" data-filter="vintage" data-original="img/Filter/vintage.png" class="lazy-load filter-preview" style="display: inline;">
+                                </div>
+                                vintage
+                            </label>
+                           </div>
+                           <div class="col-20">
+                            <label class="label-radio custom-preview-radio custom-preview-filter">
+                                <input type="radio" name="overlay_id" checked>
+                                <div class="item-inner">
+                                    <img src="img/Filter/kodachrome.png" data-filter="kodachrome" data-original="img/Filter/kodachrome.png" class="lazy-load filter-preview" style="display: inline;">
+                                </div>
+                                k/dchrome
+                            </label>
+                           </div>
+                           <div class="col-20">
+                            <label class="label-radio custom-preview-radio custom-preview-filter">
+                                <input type="radio" name="overlay_id" checked>
+                                <div class="item-inner">
+                                    <img src="img/Filter/technicolor.png" data-filter="technicolor" data-original="img/Filter/technicolor.png" class="lazy-load filter-preview" style="display: inline;">
+                                </div>
+                                t/nicolor
+                            </label>
+                           </div>
+                           <div class="col-20">
+                            <label class="label-radio custom-preview-radio custom-preview-filter">
+                                <input type="radio" name="overlay_id" checked>
+                                <div class="item-inner">
+                                    <img src="img/Filter/polaroid.png" data-filter="polaroid" data-original="img/Filter/polaroid.png" class="lazy-load filter-preview" style="display: inline;">
+                                </div>
+                                polaroid
+                            </label>
+                           </div>
+                           <div class="col-20">
+                            <label class="label-radio custom-preview-radio custom-preview-filter">
+                                <input type="radio" name="overlay_id" checked>
+                                <div class="item-inner">
+                                    <img src="img/Filter/b:w.png" data-filter="bw" data-original="img/Filter/b:w.png" class="lazy-load filter-preview" style="display: inline;">
+                                </div>
+                                B/W
+                            </label>
+                           </div>
+                           <div class="col-20">
+                            <label class="label-radio custom-preview-radio custom-preview-filter">
+                                <input type="radio" name="overlay_id" checked>
+                                <div class="item-inner">
+                                    <img src="img/Filter/sharpen.png" data-filter="sharpen" data-original="img/Filter/sharpen.png" class="lazy-load filter-preview" style="display: inline;">
+                                </div>
+                                sharpen
+                            </label>
+                           </div>
+                           <div class="col-20">
+                            <label class="label-radio custom-preview-radio custom-preview-filter">
+                                <input type="radio" name="overlay_id" checked>
+                                <div class="item-inner">
+                                    <img src="img/Filter/emboss.png" data-filter="emboss" data-original="img/Filter/emboss.png" class="lazy-load filter-preview" style="display: inline;">
+                                </div>
+                                emboss
+                            </label>
+                           </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    <!--Mask-->
+    <div class="toolbar toolbar-bottom theme-white third-toolbar mask">
+       <div class="toolbar-inner">
+           <div class="view navbar-fixed">
+                <div class="color-page pages">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <a class="link reset reset-mask" hidden="">
+                                    <i class="f7-icons color-red">refresh</i>
+                                    <span class="color-black">reset</span>
+                                </a>
+                            </div>
+                            <div class="center sliding color-black object-title object-color-header">Edit mask</div>
+                            <div class="right">
+                                <a href="#" class="link close-third-toolbar">
+                                    <i class="f7-icons color-black">close</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content infinite-scroll infinite-mask">
+                      <div class="row no-gutter mask-horizontal"></div>
+                      <!-- Preloader -->
+                      <div class="infinite-scroll-preloader">
+                        <div class="preloader"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    <!--Susunan-->
+    <div class="toolbar tabbar tabbar-labels toolbar-bottom theme-white third-toolbar susunan">
+       <div class="toolbar-inner toolbar-full-button">
+           <a href="#" class="link button button-raised button-fill ripple-green susun-atas">
+              <span class="tabbar-label tabbar--secondary color-black lh-0">BRING FORWARD</span>
+           </a>
+           <a href="#" class="link button button-raised button-fill ripple-green susun-bawah">
+              <span class="tabbar-label tabbar--secondary color-black lh-0">SEND BACKWARD</span>
+           </a>
+       </div>
+    </div>
+    <!--Flip-->
+    <div class="toolbar tabbar tabbar-labels toolbar-bottom theme-white third-toolbar flip">
+       <div class="toolbar-inner toolbar-full-button">
+           <a href="#" class="link button button-raised button-fill ripple-green flip-vertical">
+              <span class="tabbar-label tabbar--secondary color-black lh-0">FLIP VERTICAL</span>
+           </a>
+           <a href="#" class="link button button-raised button-fill ripple-green flip-horizontal">
+              <span class="tabbar-label tabbar--secondary color-black lh-0">FLIP HORIZONTAL</span>
+           </a>
+       </div>
+    </div>
+    <!--Posisi-->
+    <div class="toolbar tabbar tabbar-labels toolbar-bottom theme-white third-toolbar posisi">
+       <div class="toolbar-inner toolbar-full-button">
+           <a href="#" class="link button button-raised button-fill ripple-green posisi-kiri">
+              <span class="tabbar-label tabbar--secondary color-black lh-0">KIRI</span>
+           </a>
+           <a href="#" class="link button button-raised button-fill ripple-green posisi-kanan">
+              <span class="tabbar-label tabbar--secondary color-black lh-0">KANAN</span>
+           </a>
+           <a href="#" class="link button button-raised button-fill ripple-green posisi-atas">
+              <span class="tabbar-label tabbar--secondary color-black lh-0">ATAS</span>
+           </a>
+           <a href="#" class="link button button-raised button-fill ripple-green posisi-bawah">
+              <span class="tabbar-label tabbar--secondary color-black lh-0">BAWAH</span>
+           </a>
+       </div>
+    </div>
+    <!--Putar-->
+    <div class="toolbar tabbar tabbar-labels toolbar-bottom theme-white third-toolbar putar">
+       <div class="toolbar-inner toolbar-full-button p-10 pr-10">
+           <div class="col-10 value-input value-input-offset text-center">
+            <span class="color-black value-putar">0</span>
+           </div>
+            <div class="range-slider range-slider-custom theme-black">
+              <input type="range" class="range-putar" min="0" max="100" step="1" value="0">
+            </div>
+       </div>
+    </div>
+    <!--Produk-->
+    <div class="popup popup-produk">
+        <div class="view navbar-fixed">
+            <div class="color-page pages">
+                <div class="navbar theme-green">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a class="link reset close-popup" hidden="">
+                                <i class="f7-icons color-white">left</i>
+                            </a>
+                        </div>
+                        <div class="center sliding color-white object-title object-title-popup object-color-header">Casing Hp</div>
+                        <div class="right">
+                            <a href="#" class="link close-third-toolbar close-popup">
+                                <i class="f7-icons color-white">check</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content pt-0">
+                 <div class="content-block">
+                  <span class="color-black">Pilih Brand:</span>
+                  <div class="row mb-15">   
+                      <div class="col-100">
+                          <div class="item-input">
+                            <select class="select-font-custom select-font">
+                              <option>Male</option>
+                              <option>Female</option>
+                            </select>
+                          </div>
+                      </div> 
+                  </div>
+                  <span class="color-black">Pilih Tipe:</span>
+                  <div class="row mb-15">   
+                      <div class="col-100">
+                          <div class="item-input">
+                            <select class="select-font-custom select-font">
+                              <option>Male</option>
+                              <option>Female</option>
+                            </select>
+                          </div>
+                      </div> 
+                  </div>
+                  <span class="color-black">Pilih Bahan:</span>
+                  <div class="row mb-15">   
+                      <div class="col-100">
+                          <div class="item-input">
+                            <select class="select-font-custom select-font">
+                              <option>Male</option>
+                              <option>Female</option>
+                            </select>
+                          </div>
+                      </div> 
+                  </div>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Add Teks-->
+    <div class="popup popup-teks popup-input-text">
+        <div class="view navbar-fixed">
+            <div class="color-page pages">
+                <div class="navbar theme-green">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a class="link reset close-popup" hidden="">
+                                <i class="f7-icons color-white">left</i>
+                            </a>
+                        </div>
+                        <div class="center sliding color-white object-title object-title-popup object-color-header">Tambah Teks</div>
+                        <div class="right">
+                            <a href="#" class="link close-teks close-third-toolbar close-popup">
+                                <i class="f7-icons color-white">check</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content pt-0">
+                 <div class="content-block">
+                  <div class="row">
+                    <div class="col-100">
+                      <div class="item-input input-text">
+                        <input type="text" placeholder="Teks.." class="text-data">
+                      </div>
+                    </div>
+                  </div>
+                  <span class="color-black">Pilih Warna:</span>
+                  <div class="row mb-15">   
+                      <div class="col-100 color-list-container">
+                          <div class="color-list"></div>
+                      </div> 
+                  </div>
+                  <span class="mt-40 color-black">Pilih Font:</span>
+                  <div class="row">   
+                      <div class="col-100">
+                          <div class="item-input">
+                            <input type="text" class="select-font-custom select-font plugin-font" id="font-select">
+                          </div>
+                      </div> 
+                  </div>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Edit Teks-->
+    <div class="popup popup-teks popup-edit-text">
+        <div class="view navbar-fixed">
+            <div class="color-page pages">
+                <div class="navbar theme-green">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a class="link reset close-popup" hidden="">
+                                <i class="f7-icons color-white">left</i>
+                            </a>
+                        </div>
+                        <div class="center sliding color-white object-title object-title-popup object-color-header">Edit Teks</div>
+                        <div class="right">
+                            <a href="#" class="link close-teks close-third-toolbar close-popup">
+                                <i class="f7-icons color-white">check</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content pt-0">
+                 <div class="content-block">
+                  <div class="row">
+                    <div class="col-100">
+                      <div class="item-input input-text">
+                        <input type="text" placeholder="Teks.." class="text-data">
+                      </div>
+                    </div>
+                  </div>
+                  <span class="color-black">Pilih Warna:</span>
+                  <div class="row mb-15">   
+                      <div class="col-100 color-list-container">
+                          <div class="color-list"></div>
+                      </div> 
+                  </div>
+                  <span class="mt-40 color-black">Pilih Font:</span>
+                  <div class="row">   
+                      <div class="col-100">
+                          <div class="item-input">
+                            <input type="text" class="select-font-custom select-font plugin-font" id="font-select">
+                          </div>
+                      </div> 
+                  </div>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Clipart-->
+    <div class="popup popup-clipart">
+        <div class="view navbar-fixed">
+            <div class="color-page pages">
+                <div class="navbar theme-green">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a class="link reset close-popup close-clipart" hidden="">
+                                <i class="f7-icons color-white">left</i>
+                            </a>
+                        </div>
+                        <div class="center sliding color-white object-title object-title-popup object-color-header">Clipart</div>
+                    </div>
+                </div>
+                <div class="page-content infinite-scroll infinite-clipart pt-0" data-distance="100">
+                 <div class="content-block">
+                   <div class="row clipart-grid"></div>
+                 </div>
+                <!-- Preloader -->
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader"></div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product Mockup Color -->
+    <div class="toolbar toolbar-bottom navbar-fixed tabbar floating-toolbar floating-product-color floating-scrollable hide-on-zoom" style="left: 18px; display: block;">
+        <span class="floating-toolbar-caption">
+            Pilih Warna:
+        </span>
+        <div class="page-content">
+        <div class="row">
+          <div class="col-100 color-list-container">
+              <div class="color-list"></div>
+          </div> 
+        </div>
+        </div>
+    </div>
+    <!--Uploader-->
+    <div class="picker-modal picker-info picker--custom picker--upload">
+        <div class="toolbar theme-white">
+          <div class="toolbar-inner toolbar--inner-bottom">
+            <div class="left">
+                <i class="f7-icons color-orange size-18">images_fill</i>
+                <span class="color-black title--picker">Upload Gambar</span>
+            </div>
+            <div class="right">
+                <a href="#" class="close-picker color-white">
+                    <i class="f7-icons color-black">close</i>
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="picker-modal-inner content--picker-modal">
+          <div class="page-content p-10">
+              <p>Format gambar yang dapat diproses adalah: <strong>.png</strong> atau <strong>.jpg</strong></p>
+              <input type="file" class="btn-process-upload">
+              <p class="buttons-row">
+                  <button class="button button-raised button-fill btn-upload" name="uploaded" id="uploaded" >PILIH FILE</button>
+                  <a href="#" class="button btn-close-picker button-raised button-fill color-white text-black">BATAL</a>
+              </p>      
+          </div>
+        </div>
+    </div>
+</div>
